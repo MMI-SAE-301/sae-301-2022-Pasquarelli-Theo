@@ -1,7 +1,7 @@
 <template>
   <header class="bg-black">
     <nav>
-      <h1 class="text-3xl text-center text-white">Tik-Tak</h1>
+      <RouterLink to="/"><h1 class="text-3xl font-aboreto text-center text-white">Tik-Tak</h1></RouterLink>
       <!--<ul>
         <li>
           <router-link class="text-red-600 underline" to="/">

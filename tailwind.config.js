@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         okine: "MADE Okine Sans PERSONAL USE",
+        aboreto: "Aboreto",
       },
       colors: {
         blue: "#010131",
