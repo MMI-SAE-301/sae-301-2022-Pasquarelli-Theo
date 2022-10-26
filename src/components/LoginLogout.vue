@@ -1,20 +1,26 @@
 <script setup>
 import { createClient } from "@supabase/supabase-js";
 import { SupabaseAuthClient } from "@supabase/supabase-js/dist/module/lib/SupabaseAuthClient";
+import bouton from "@/components/bouton.vue";
+
 </script>
 
-<template>
-  <header>
+<template class="">
+  <div class="ml-56 border-0 w-2/3">
+<div class="bg-light_grey">
+    <h2 class=" ml-28 w-1/2 font-aboreto text-xl">Compte</h2>
+      <hr class="ml-32 mt-4 mb-8 h-0.5 w-32 bg-black" />
 
-
-    <h1>{{ msg }}</h1>
-    <p>Please login if you have an account or register :</p>
-    <button @click="logingoogle()">Authentification avec Google</button><br />
-    <button @click="loginfacebook()">Authentification avec Facebook</button><br />
-    <button @click="logout()">Deconnexion</button><br />
+    <div class="text-center">
+    <bouton libelle="Authentification avec Google" class="border-2 mb-3 mt-28 rounded-sm w-96 h-14" @click="logingoogle()"/><br />
+    <bouton libelle="Authentification avec Facebook" class="border-2 m-3 rounded-sm w-96 h-14" @click="loginfacebook()"/><br />
+    <bouton libelle="Deconnexion" class="border-2 mt-3 mb-28 rounded-sm w-96 h-14" @click="logout()"/><br />
     <label id="status"></label>
+    </div>
     
-  </header>
+  </div>
+  </div>
+
 </template>
 
 <script>
