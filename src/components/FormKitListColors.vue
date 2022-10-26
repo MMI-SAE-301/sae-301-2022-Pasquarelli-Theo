@@ -22,7 +22,7 @@ defineProps<{
   >
     <template #label="context">
       <div
-        class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
+        class="h-6 w-6 rounded-full border-2 peer-checked:border-black"
         :style="{ backgroundColor: context.option.value }"
       ></div>
       <span class="sr-only">{{ context.option.label }}</span>
