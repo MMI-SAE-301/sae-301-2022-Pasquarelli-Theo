@@ -59,6 +59,7 @@ const montreco = ref<Montre>(props.data ?? {});
       <div>
         <FormKit type="form" v-model="montreco" @submit="upsertMontre">
           <FormKit
+            id="ecran"
             name="ecran"
             label="ecran"
             value="#FFFFFF"
@@ -73,13 +74,14 @@ const montreco = ref<Montre>(props.data ?? {});
           >
             <template #label="context">
               <div
-                class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
+                class="peer-checked:border-red-600 h-6 w-6 rounded-full border-2"
                 :style="{ backgroundColor: context.option.value }"
               ></div>
               <span class="sr-only">{{ context.option.label }}</span></template
             >
-          </FormKit> 
+          </FormKit>
           <FormKit
+            id="cadrant"
             name="cadrant"
             label="cadrant"
             value="#FFFFFF"
@@ -94,13 +96,14 @@ const montreco = ref<Montre>(props.data ?? {});
           >
             <template #label="context">
               <div
-                class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
+                class="peer-checked:border-red-600 h-6 w-6 rounded-full border-2"
                 :style="{ backgroundColor: context.option.value }"
               ></div>
-              <span class="sr-only">{{ context.option.label }}</span></template
-            >
-          </FormKit> 
+              <span class="sr-only">{{ context.option.label }}</span>
+            </template>
+          </FormKit>
           <FormKit
+            id="bracelet"
             name="bracelet"
             label="bracelet"
             value="#FFFFFF"
@@ -115,16 +118,14 @@ const montreco = ref<Montre>(props.data ?? {});
           >
             <template #label="context">
               <div
-                class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
+                class="peer-checked:border-red-600 h-6 w-6 rounded-full border-2"
                 :style="{ backgroundColor: context.option.value }"
               ></div>
               <span class="sr-only">{{ context.option.label }}</span></template
             >
-          </FormKit>       
+          </FormKit>
         </FormKit>
       </div>
     </div>
   </div>
 </template>
-
-
