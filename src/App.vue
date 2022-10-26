@@ -1,33 +1,10 @@
 <template>
-  <header class="bg-black">
-    <nav>
-      <RouterLink to="/"><h1 class="text-3xl font-aboreto text-center text-white">Tik-Tak</h1></RouterLink>
-      <router-link class="text-red-600 underline" to="/Log">
-            <code class="font-mono">/src/pages/index.vue</code>
-          </router-link>
-          <!--<ul>
-        <li>
-          
-        </li>
-        <br />
-        <router-link class="text-red-600 underline" to="/montre">
-          lien vers
-          <code class="font-mono">Liste des montres</code>
-        </router-link>
-        <br />
-        <router-link class="text-red-600 underline" to="/montre/new">
-          lien vers
-          <code class="font-mono">New</code>
-        </router-link>
-        <br />
-        <router-link class="text-red-600 underline" to="/Log">
-          lien vers
-          <code class="font-mono">Log</code>
-        </router-link>
-        <br />
-      </ul>-->
-    </nav>
-  </header>
+  <header class="bg-black grid grid-flow-dense grid-cols-2">
+      <RouterLink to="/"><h1 class="text-3xl span-2 font-aboreto text-center text-white">Tik-Tak</h1></RouterLink>
+      <div  class="span-3 flex">
+      <RouterLink to="/Log"><img src="../public/icon_user.png"/></RouterLink>
+      <RouterLink to="/montre/new"><img src="../public/icon_liste.png " class="span-3"/></RouterLink></div>
+        </header>
 
   <!-- Affiche les pages -->
   <Suspense>

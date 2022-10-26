@@ -15,7 +15,7 @@ import bouton from "@/components/bouton.vue";
         vous. Personnalisées différentes parties de votre montre pour avoir la
         combinaison qui vous correspond le mieux.
       </p>
-      <img src="../public/CoinB.png" class="ml-96" />
+      <img src="public/CoinB.png" class="ml-96" />
       <RouterLink to="/montre/new"><bouton libelle="Personnalisation" /></RouterLink>
     </div>
   </div>
@@ -42,7 +42,7 @@ import bouton from "@/components/bouton.vue";
         avez à disposition un grand nombre de composition possible pour élaborer
         VOTRE montre parfaite.
       </p>
-      <img src="../public/CoinB.png" class="ml-96" />
+      <img src="public/CoinB.png" class="ml-96" />
     </div>
   </div>
 </template>
