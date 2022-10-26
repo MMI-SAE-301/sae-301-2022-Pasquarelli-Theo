@@ -1,10 +1,8 @@
 <template>
   <header class="bg-black">
-    <nav class="bg-black">
-      <h1 class="text-3xl text-white">
-        <code class="font-Aubrey">Tik-Tak</code>
-      </h1>
-      <ul>
+    <nav>
+      <h1 class="text-3xl text-center text-white">Tik-Tak</h1>
+      <!--<ul>
         <li>
           <router-link class="text-red-600 underline" to="/">
             <code class="font-mono">/src/pages/index.vue</code>
@@ -26,7 +24,7 @@
           <code class="font-mono">Log</code>
         </router-link>
         <br />
-      </ul>
+      </ul>-->
     </nav>
   </header>
 

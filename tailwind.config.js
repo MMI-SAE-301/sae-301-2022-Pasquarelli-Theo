@@ -6,8 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "made-okine-sans-personal-use": "MADE Okine Sans PERSONAL USE",
-        audrey: "Audrey",
+        okine: "MADE Okine Sans PERSONAL USE",
       },
       colors: {
         blue: "#010131",
