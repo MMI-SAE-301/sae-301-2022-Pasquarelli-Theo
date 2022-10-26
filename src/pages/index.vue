@@ -9,6 +9,8 @@ import Montreface from "@/components/Montreface.vue";
       <code class="font-mono text-base">/src/pages/index.vue</code>
     </h1>
     <img src="/public/montre_ombre.svg" class="w-421" />
+    <Montreprofil />
+    <Montreface/>
     <h2>Tik-Tak</h2>
     <p>La marque de montre personnalisable pensée pour vous et fabriquée pour vous. Personnalisées différentes parties de votre montre pour avoir la combinaison qui vous correspond le mieux.</p>
     <h2>Personnalisé différents composants de votre montre Tik-Tak</h2>
