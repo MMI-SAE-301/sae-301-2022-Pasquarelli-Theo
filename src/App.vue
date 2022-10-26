@@ -38,7 +38,7 @@
     <a href="https://mmi-montbeliard.nathanvanbignootvincler.fr/"><img src="public/logo-mmi.png" class="h-11 w-auto mt-3 mb-3 mr-14"/></a>
     <a href="https://www.instagram.com/?hl=fr"><img src="public/insta.png" class="h-11 w-auto mt-3 mb-3"/></a>
     </div>
-    <p class="text-xs font-okine text-white text-center">
+    <p class="text-xxs font-okine text-white text-center">
       Exercice réalisé dans le cadre d'un exercice pédagogique au département
       MMI de Montbéliard
     </p>

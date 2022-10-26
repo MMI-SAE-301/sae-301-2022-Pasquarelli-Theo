@@ -17,6 +17,7 @@ module.exports = {
         light_grey: "#f0f0f0",
       },
       fontSize: {
+        xxs: "1rem",
         xs: "1.125rem",
         sm: "1.25rem",
         base: "1.375rem",
