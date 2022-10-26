@@ -1,8 +1,8 @@
 <template>
   <header class="bg-black">
     <nav class="bg-black">
-      <h1 class="text-3xl">
-        <code class="">Tik-Tak</code>
+      <h1 class="text-3xl text-white">
+        <code class="font-Aubrey">Tik-Tak</code>
       </h1>
       <ul>
         <li>
