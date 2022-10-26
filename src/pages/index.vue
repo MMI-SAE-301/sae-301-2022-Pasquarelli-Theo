@@ -16,7 +16,7 @@ import bouton from "@/components/bouton.vue";
         combinaison qui vous correspond le mieux.
       </p>
       <img src="public/CoinB.png" class="ml-96" />
-      <RouterLink to="/montre/new"><bouton /></RouterLink>
+      <RouterLink to="/montre/new"><bouton libelle="Personnalisation" /></RouterLink>
     </div>
   </div>
   <hr class="h-0.5 w-full bg-black" />

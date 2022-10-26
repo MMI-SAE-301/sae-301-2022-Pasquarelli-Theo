@@ -39,22 +39,16 @@ const montreco = ref<Montre>(props.data ?? {});
   <div>
     <div class="flex content-center p-4">
       <div class="flex content-center">
-        <ul class="flex gap-5">
-          <li><a href="#profil">Profil</a></li>
-          <li><a href="#dessus">Dessus</a></li>
-        </ul>
-        <div class="carousel w-60">
           <Montreprofil
-            class="carousel-item w-60"
+            class="w-1/3 mr-16"
             v-bind="montreco"
             id="profil"
           />
           <Montreface
-            class="carousel-item w-60"
+            class="w-1/4"
             v-bind="montreco"
             id="dessus"
           />
-        </div>
       </div>
       <div>
         <FormKit type="form" v-model="montreco" @submit="upsertMontre">

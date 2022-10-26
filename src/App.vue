@@ -2,11 +2,12 @@
   <header class="bg-black">
     <nav>
       <RouterLink to="/"><h1 class="text-3xl font-aboreto text-center text-white">Tik-Tak</h1></RouterLink>
-      <!--<ul>
-        <li>
-          <router-link class="text-red-600 underline" to="/">
+      <router-link class="text-red-600 underline" to="/Log">
             <code class="font-mono">/src/pages/index.vue</code>
           </router-link>
+          <!--<ul>
+        <li>
+          
         </li>
         <br />
         <router-link class="text-red-600 underline" to="/montre">
