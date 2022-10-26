@@ -10,6 +10,18 @@
           <code class="font-mono">/src/pages/index.vue</code>
         </router-link>
       </li>
+
+        <br />
+        <router-link class="text-red-600 underline" to="/montre">
+          lien vers
+          <code class="font-mono">Liste des montres</code>
+        </router-link>
+        <br />
+        <router-link class="text-red-600 underline" to="/montre/edit/id">
+          lien vers
+          <code class="font-mono">New</code>
+        </router-link>
+        <br />
     </ul>
   </nav>
   </header>

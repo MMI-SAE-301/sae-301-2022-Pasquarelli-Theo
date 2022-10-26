@@ -59,8 +59,8 @@ const montre = ref<Montre>(props.data ?? {});
       <div>
         <FormKit type="form" v-model="montre" @submit="upsertMontre">
           <FormKit
-            name="semelle"
-            label="Semelle"
+            name="ecran"
+            label="ecran"
             value="#FFFFFF"
             type="radio"
             :options="colors"
@@ -78,11 +78,10 @@ const montre = ref<Montre>(props.data ?? {});
               ></div>
               <span class="sr-only">{{ context.option.label }}</span></template
             >
-          </FormKit>
-
+          </FormKit> 
           <FormKit
-            name="empeigne"
-            label="Empeigne"
+            name="cadrant"
+            label="cadrant"
             value="#FFFFFF"
             type="radio"
             :options="colors"
@@ -100,11 +99,10 @@ const montre = ref<Montre>(props.data ?? {});
               ></div>
               <span class="sr-only">{{ context.option.label }}</span></template
             >
-          </FormKit>
-
+          </FormKit> 
           <FormKit
-            name="pointe"
-            label="Pointe"
+            name="bracelet"
+            label="bracelet"
             value="#FFFFFF"
             type="radio"
             :options="colors"
@@ -122,139 +120,7 @@ const montre = ref<Montre>(props.data ?? {});
               ></div>
               <span class="sr-only">{{ context.option.label }}</span></template
             >
-          </FormKit>
-
-          <FormKit
-            name="oeillet"
-            label="Oeillet"
-            value="#FFFFFF"
-            type="radio"
-            :options="colors"
-            :sections-schema="{
-              inner: { $el: null },
-              decorator: { $el: null },
-            }"
-            input-class="peer sr-only"
-            options-class="flex gap-1"
-          >
-            <template #label="context">
-              <div
-                class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
-                :style="{ backgroundColor: context.option.value }"
-              ></div>
-              <span class="sr-only">{{ context.option.label }}</span></template
-            >
-          </FormKit>
-
-          <FormKit
-            name="bande"
-            label="Bande"
-            value="#FFFFFF"
-            type="radio"
-            :options="colors"
-            :sections-schema="{
-              inner: { $el: null },
-              decorator: { $el: null },
-            }"
-            input-class="peer sr-only"
-            options-class="flex gap-1"
-          >
-            <template #label="context">
-              <div
-                class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
-                :style="{ backgroundColor: context.option.value }"
-              ></div>
-              <span class="sr-only">{{ context.option.label }}</span></template
-            >
-          </FormKit>
-
-          <FormKit
-            name="languette"
-            label="Languette"
-            value="#FFFFFF"
-            type="radio"
-            :options="colors"
-            :sections-schema="{
-              inner: { $el: null },
-              decorator: { $el: null },
-            }"
-            input-class="peer sr-only"
-            options-class="flex gap-1"
-          >
-            <template #label="context">
-              <div
-                class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
-                :style="{ backgroundColor: context.option.value }"
-              ></div>
-              <span class="sr-only">{{ context.option.label }}</span></template
-            >
-          </FormKit>
-
-          <FormKit
-            name="lacet"
-            label="Lacet"
-            value="#FFFFFF"
-            type="radio"
-            :options="colors"
-            :sections-schema="{
-              inner: { $el: null },
-              decorator: { $el: null },
-            }"
-            input-class="peer sr-only"
-            options-class="flex gap-1"
-          >
-            <template #label="context">
-              <div
-                class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
-                :style="{ backgroundColor: context.option.value }"
-              ></div>
-              <span class="sr-only">{{ context.option.label }}</span></template
-            >
-          </FormKit>
-
-          <FormKit
-            name="trimestre"
-            label="Trimestre"
-            value="#FFFFFF"
-            type="radio"
-            :options="colors"
-            :sections-schema="{
-              inner: { $el: null },
-              decorator: { $el: null },
-            }"
-            input-class="peer sr-only"
-            options-class="flex gap-1"
-          >
-            <template #label="context">
-              <div
-                class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
-                :style="{ backgroundColor: context.option.value }"
-              ></div>
-              <span class="">{{ context.option.label }}</span></template
-            >
-          </FormKit>
-
-          <FormKit
-            name="materiaux"
-            label="Materiaux"
-            type="radio"
-            :options="materiaux"
-            :sections-schema="{
-              inner: { $el: null },
-              decorator: { $el: null },
-            }"
-            input-class="peer sr-only"
-            options-class="flex gap-1 space-x-10 "
-          >
-            <template #label="context">
-              <img
-                class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
-                :src="context.option.img"
-                :alt="context.option.label"
-              />
-              <span class="">{{ context.option.label }}</span>
-            </template>
-          </FormKit>
+          </FormKit>       
         </FormKit>
       </div>
     </div>

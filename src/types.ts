@@ -1,38 +1,32 @@
 export interface Montre {
-  Bracelet?: string;
-  Cadrant?: string;
-  Ecran?: string;
+  bracelet?: string;
+  cadrant?: string;
+  ecran?: string;
 }
 
 export const colors = {
   "#000000": "Noir",
   "#FFFFFF": "Blanc",
-  "#FF0000": "Rouge",
-  "#00FF00": "Vert",
-  "#0000FF": "Bleu",
-  "#FFFF00": "Jaune",
-  "#FF00FF": "Magenta",
-  "#00FFFF": "Cyan",
-  "#C0C0C0": "Gris clair",
-  "#808080": "Gris",
-  "#800000": "Marron",
-  "#808000": "Olive",
+  "#0C4E1E": "Vert",
+  "#A66C16": "Orange",
+  "#565656": "Gris",
+  "#49370A ": "Marron",
 };
 
 export const materiaux = [
   {
-    value: "fd47e7ed-151f-46db-86b0-4d8a73af1a7b",
-    img: "https://blog.jacquesdemeter.fr/wp-content/uploads/2015/10/cuir-grain%C3%A9.jpg",
-    label: "Cuir",
+    value: "32a1de4b-46c8-4ef6-91eb-640a623a5226",
+    img: "https://www.maceinturecuir.com/blog/wp-content/uploads/2019/07/cuir-naturel.jpg",
+    label: "cuir",
   },
   {
-    value: "94381cbb-6460-4b4c-ad84-01b50b5070eb",
+    value: "b8e44964-7fe1-4ca7-8274-c84afc2302e2",
     img: "https://www.mondialtissus.fr/media/catalog/product/cache/5a7b68a13efa2fc32f1f88cc4632d82f/0/1/0120f5f98fa48cc7db66da3962126c7783d57701_225993.jpg",
-    label: "Tissu",
-  },  
+    label: "tissu",
+  },
   {
-    value: "f632b0a3-6ada-40df-a93b-b337b790fb72",
-    img: "https://www.kozze.fr/img/cms/cms/Polyester_4.jpg",
-    label: "Synthétique",
+    value: "7e8d16ac-db0a-4594-8f78-f313e029158d",
+    img: "https://www.usinenouvelle.com/expo/img/feuille-caoutchouc-sbr-noir-013013680-product_zoom.jpg",
+    label: "caoutchouc",
   },
 ];

@@ -5,7 +5,7 @@ CREATE TABLE montre (
 id_montre uuid default uuid_generate_v4(), 
 ecran varchar, 
 bracelet varchar, 
-boitier varchar, 
+cadrant varchar, 
 commande bool, 
 id_materiaux uuid, 
 id_user uuid , 
@@ -29,17 +29,17 @@ from "materiaux", "montre"
 where "materiaux".id_materiaux = "montre".id_materiaux 
 and "materiaux"."libelle" = 'cuir'; 
 
-create VIEW allAluminium as 
+create VIEW allTissu as 
 select "montre".* 
 from "materiaux", "montre"
 where "materiaux".id_materiaux = "montre".id_materiaux 
-and "materiaux"."libelle" = 'aluminium'; 
+and "materiaux"."libelle" = 'tissu'; 
 
-create VIEW allAcier as 
+create VIEW allCaoutchouc as 
 select "montre".*
 from "materiaux", "montre" 
 where "materiaux".id_materiaux = "montre".id_materiaux 
-and "materiaux"."libelle" = 'acier';
+and "materiaux"."libelle" = 'caoutchouc';
 
 create VIEW allMateriaux as 
 select * 
@@ -48,3 +48,17 @@ from "materiaux";
 --
 -- code pour la création des policies
 --
+Table montre : Editing policy from public.montre
+Enable read access for all users
+/
+true
+
+Enable insert for authenticated users only
+authenticated
+true
+
+Enable update for users based on email
+/
+(uid() = id_user)
+(uid() IN ( SELECT montre_1.id_user
+		FROM montre montre_1))
