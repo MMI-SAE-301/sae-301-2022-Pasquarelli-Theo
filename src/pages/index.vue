@@ -28,7 +28,7 @@ import bouton from "@/components/bouton.vue";
   <img src="../assets/montre_decompo.png" class="mx-auto mb-16 block w-3/5" alt="image de la montre Tik-Tak décomposé en différent composants"/>
   <hr class="h-0.5 w-full bg-black" />
 
-  <div class="grid grid-flow-row-dense grid-cols-2 -mb-32">
+  <div class="grid grid-flow-row-dense grid-cols-2 ">
     <img src="../assets/exmontres.png" class="m-16 h-3/5" alt="exemple de 3 montres différentes"/>
     <div class="mt-24 ml-12">
       <img src="../assets/CoinH.png" class="-ml-12" />
