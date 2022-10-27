@@ -7,8 +7,10 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import Montreprofil from "./Montreprofil.vue";
 import Montreface from "./Montreface.vue";
+
 // import FormKitListColors from "./FormKitListColors.vue";
 
+let scroll = ref(true);
 const router = useRouter();
 const montreperso = ref({});
 const props = defineProps(["id"]);
@@ -36,22 +38,35 @@ const montreco = ref<Montre>(props.data ?? {});
 </script>
 
 <template>
+  <h2>Montre connecté Tik-Tak</h2>
   <div>
-    <div class="flex content-center p-4">
-      <div class="overflow-x-scroll flex content-center">
-          <Montreprofil
-            class="w-1/3 mr-16"
-            v-bind="montreco"
-            id="profil"
-          />
-          <Montreface
-            class="w-1/4"
-            v-bind="montreco"
-            id="dessus"
-          />
+    <div class="flex p-4">
+      <div>
+        <Montreface
+          v-if="!scroll"
+          v-on:click="scroll = !scroll"
+          :class="{ hidden: scroll }"
+          class="ml-24 mr-32 w-1/3"
+          v-bind="montreco"
+          id="dessus"
+        /><Montreprofil
+          v-if="scroll"
+          v-on:click="scroll = !scroll"
+          class="ml-24 w-1/3"
+          v-bind="montreco"
+          id="profil"
+        />
+        <p class="text ml-20 -mt-12 mb-12 font-okine">
+          Cliquer pour changer de vue
+        </p>
       </div>
       <div>
-        <FormKit submit-label="Commander" type="form" v-model="montreco" @submit="upsertMontre">
+        <FormKit
+          submit-label="Commander"
+          type="form"
+          v-model="montreco"
+          @submit="upsertMontre"
+        >
           <FormKit
             id="ecran"
             name="ecran"
@@ -68,7 +83,7 @@ const montreco = ref<Montre>(props.data ?? {});
           >
             <template #label="context">
               <div
-                class="peer-checked:border-red-600 h-6 w-6 rounded-full border-2"
+                class="h-6 w-6 rounded-full border-2 border-white peer-checked:border-black"
                 :style="{ backgroundColor: context.option.value }"
               ></div>
               <span class="sr-only">{{ context.option.label }}</span></template
@@ -90,7 +105,7 @@ const montreco = ref<Montre>(props.data ?? {});
           >
             <template #label="context">
               <div
-                class="peer-checked:border-red-600 h-6 w-6 rounded-full border-2"
+                class="h-6 w-6 rounded-full border-2 border-white peer-checked:border-black"
                 :style="{ backgroundColor: context.option.value }"
               ></div>
               <span class="sr-only">{{ context.option.label }}</span>
@@ -112,11 +127,36 @@ const montreco = ref<Montre>(props.data ?? {});
           >
             <template #label="context">
               <div
-                class="peer-checked:border-red-600 h-6 w-6 rounded-full border-2"
+                class="h-6 w-6 rounded-full border-2 border-white peer-checked:border-black"
                 :style="{ backgroundColor: context.option.value }"
               ></div>
               <span class="sr-only">{{ context.option.label }}</span></template
             >
+          </FormKit>
+          <FormKit
+            name="id_materiaux"
+            label="materiau du bracelet"
+            value="ece9b013-f979-49a9-ae29-9a16491a9891"
+            type="radio"
+            :options="materiaux"
+            :sections-schema="{
+              inner: { $el: null },
+              decorator: { $el: null },
+            }"
+            legend-class="sr-only"
+            input-class="peer sr-only"
+            options-class="flex w-full justify-between gap-5"
+            wrapper-class="flex flex-col items-center"
+          >
+            <template #label="context">
+              <img
+                class="h-10 w-10 rounded-full border-2 border-white peer-checked:border-black"
+                :src="context.option.img"
+                :alt="context.option.label"
+              />
+
+              <span>{{ context.option.label }}</span>
+            </template>
           </FormKit>
         </FormKit>
       </div>

@@ -6,16 +6,16 @@ import bouton from "@/components/bouton.vue";
 
 <template>
   <div class="grid grid-flow-row-dense grid-cols-2">
-    <img src="../src/assets/montre_ombre.svg" class="ml-64 mt-10 w-2/4" />
+    <img src="../assets/montre_ombre.svg" class="ml-64 mt-10 w-2/4" />
     <div class="mt-24 ml-24">
-      <img src="../src/assets/CoinH.png" class="-ml-12" />
+      <img src="../assets/CoinH.png" class="-ml-12" />
       <h2 class="font-aboreto text-xl">Tik-Tak</h2>
       <p class="w-3/4 font-okine text-base">
         La marque de montre personnalisable pensée pour vous et fabriquée pour
         vous. Personnalisées différentes parties de votre montre pour avoir la
         combinaison qui vous correspond le mieux.
       </p>
-      <img src="../src/assets/CoinB.png" class="ml-96" />
+      <img src="../assets/CoinB.png" class="ml-96" />
       <RouterLink to="/montre/new"><bouton libelle="Personnalisation" /></RouterLink>
     </div>
   </div>
@@ -25,13 +25,13 @@ import bouton from "@/components/bouton.vue";
     Personnalisé différents composants de votre montre Tik-Tak
   </h2>
   <hr class="ml-36 mt-4 mb-8 h-0.5 w-96 bg-black" />
-  <img src="../src/assets/montre_decompo.png" class="mx-auto mb-16 block w-3/5" />
+  <img src="../assets/montre_decompo.png" class="mx-auto mb-16 block w-3/5" />
   <hr class="h-0.5 w-full bg-black" />
 
   <div class="grid grid-flow-row-dense grid-cols-2">
-    <img src="../src/assets/exmontres.png" class="m-16 h-3/5" />
+    <img src="../assets/exmontres.png" class="m-16 h-3/5" />
     <div class="mt-24 ml-12">
-      <img src="../src/assets/CoinH.png" class="-ml-12" />
+      <img src="../assets/CoinH.png" class="-ml-12" />
 
       <h2 class="font-aboreto text-xl">L’histoire de Tik-Tak</h2>
       <hr class="my-1 h-0.5 w-40 bg-black" />
@@ -42,7 +42,7 @@ import bouton from "@/components/bouton.vue";
         avez à disposition un grand nombre de composition possible pour élaborer
         VOTRE montre parfaite.
       </p>
-      <img src="../src/assets/CoinB.png" class="ml-96" />
+      <img src="../assets/CoinB.png" class="ml-96" />
     </div>
   </div>
 </template>

@@ -16,7 +16,7 @@ export const colors = {
 export const materiaux = [
   {
     value: "32a1de4b-46c8-4ef6-91eb-640a623a5226",
-    img: "https://www.maceinturecuir.com/blog/wp-content/uploads/2019/07/cuir-naturel.jpg",
+    img: "https://alltissus.com/5593-large_default/1802.jpg",
     label: "cuir",
   },
   {
