@@ -1,10 +1,12 @@
 <template>
-  <header class="bg-black grid grid-flow-dense grid-cols-2">
-      <RouterLink to="/"><h1 class="text-3xl span-2 font-aboreto text-center text-white">Tik-Tak</h1></RouterLink>
-      <div  class="span-3 flex">
+  <header class="bg-black flex justify-between items-center ">
+    <div class=" w-2 bg-black h-2"/>
+      <RouterLink to="/"><h1 class="text-3xl  font-aboreto text-center text-white">Tik-Tak</h1></RouterLink>
+      <div  class="flex items-end mx-6">
       <RouterLink to="/Log"><img src="../public/icon_user.png"/></RouterLink>
-      <RouterLink to="/montre/new"><img src="../public/icon_liste.png " class="span-3"/></RouterLink></div>
-        </header>
+      <RouterLink to="/montre/new"><img src="../public/icon_liste.png " class="mx-8"/></RouterLink>
+    </div>
+  </header>
 
   <!-- Affiche les pages -->
   <Suspense>
