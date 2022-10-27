@@ -1,4 +1,5 @@
 <script setup lang="ts">
+//@ts-nocheck
 import type { Montre } from "@/types";
 import { supabase } from "@/supabase";
 import { colors } from "@/types";
