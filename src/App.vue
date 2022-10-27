@@ -1,6 +1,6 @@
 <template>
   <header class="bg-black flex justify-between items-center ">
-    <div class=" w-2 bg-black h-2"/>
+    <div class=" w-2 bg-black h-2"></div>
       <RouterLink to="/"><h1 class="text-3xl  font-aboreto text-center text-white">Tik-Tak</h1></RouterLink>
       <div  class="flex items-end mx-6">
       <RouterLink to="/Log"><img src="../src/assets/icon_user.png"/></RouterLink>
