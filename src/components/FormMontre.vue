@@ -26,6 +26,7 @@ if (props.id) {
   else montreco.value = data[0];
 }
 
+// @ts-ignore
 async function upsertMontre(dataForm, node) {
   const { data, error } = await supabase.from("montre").upsert(dataForm);
   if (error) node.setErrors([error.message]);
