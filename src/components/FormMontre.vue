@@ -41,7 +41,7 @@ const montreco = ref<Montre>(props.data ?? {});
   <h2 class="text-center font-aboreto text-xl">Montre connecté Tik-Tak</h2>
   <p class="text-center font-okine text-xs">249.99€</p>
   <div>
-    <div class="ml-48 flex">
+    <div class="ml-32 flex place-content-center">
       <div class="-mt-16">
         <Montreface
           v-if="!scroll"
@@ -61,8 +61,8 @@ const montreco = ref<Montre>(props.data ?? {});
           Cliquer pour changer de vue
         </p>
       </div>
-      <div class="ml-20 mt-20 h-80 rounded-md w-96 bg-light_grey">
-        <div class="ml-20 w-56">
+      <div class="ml-2 mt-14 h-96 rounded-md w-96 bg-light_grey">
+        <div class="ml-20 mt-12 w-56">
           <FormKit
             submit-class="bg-white"
             submit-label="Commander"
@@ -76,21 +76,21 @@ const montreco = ref<Montre>(props.data ?? {});
                     },
                 }"
                     :submit-attrs="{ classes: { input: 'bg-white font-athena border-2 text-black rounded-xs hover:bg-black hover:text-white p-2' } }">
-          
             <FormKit
               id="ecran"
               name="ecran"
               label="ecran"
               value="#FFFFFF"
               type="radio"
+              legend-class="font-aboreto"
               :options="colors"
+              option-label="font-aboreto"
               :sections-schema="{
                 inner: { $el: null },
                 decorator: { $el: null },
               }"
               input-class="peer sr-only"
-              options-class="flex gap-1"
-            >
+              options-class="flex gap-1">
               <template #label="context">
                 <div
                   class="h-6 w-6 rounded-full border-2 border-white peer-checked:border-black"
@@ -107,6 +107,7 @@ const montreco = ref<Montre>(props.data ?? {});
               label="cadrant"
               value="#FFFFFF"
               type="radio"
+              legend-class="font-aboreto"
               :options="colors"
               :sections-schema="{
                 inner: { $el: null },
@@ -129,6 +130,7 @@ const montreco = ref<Montre>(props.data ?? {});
               label="bracelet"
               value="#FFFFFF"
               type="radio"
+              legend-class="font-aboreto"
               :options="colors"
               :sections-schema="{
                 inner: { $el: null },
@@ -150,6 +152,7 @@ const montreco = ref<Montre>(props.data ?? {});
             <br />
             <FormKit
               name="id_materiaux"
+              id="Matériaux du bracelet"
               label="materiau du bracelet"
               value="ece9b013-f979-49a9-ae29-9a16491a9891"
               type="radio"
@@ -158,14 +161,14 @@ const montreco = ref<Montre>(props.data ?? {});
                 inner: { $el: null },
                 decorator: { $el: null },
               }"
-              legend-class="sr-only"
-              input-class="peer sr-only"
+              legend-class="font-aboret sr-only"
+              input-class="peer text-black font-aboret sr-only"
               options-class="flex w-full justify-between gap-5"
               wrapper-class="flex flex-col items-center"
             >
               <template #label="context">
                 <img
-                  class="h-10 w-10 rounded-full border-2 border-white peer-checked:border-black"
+                  class="h-10 w-10 rounded-full font-aboreto border-2 border-white peer-checked:border-black"
                   :src="context.option.img"
                   :alt="context.option.label"
                 />

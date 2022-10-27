@@ -4,7 +4,7 @@
       <RouterLink to="/"><h1 class="text-3xl  font-aboreto text-center text-white">Tik-Tak</h1></RouterLink>
       <div  class="flex items-end mx-6">
       <RouterLink to="/Log"><img src="../src/assets/icon_user.png"/></RouterLink>
-      <RouterLink to="/montre/new"><img src="../src/assets/icon_liste.png " class="mx-8"/></RouterLink>
+      <RouterLink to="/Liste"><img src="../src/assets/icon_liste.png " class="mx-8"/></RouterLink>
     </div>
   </header>
 

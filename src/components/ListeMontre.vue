@@ -15,11 +15,11 @@ if (error) {
 
 <template>
   <ul>
-    <li v-for="montre in Montre" :key="montre.montre">
+    <li v-for="montreperso in Montre" :key="montreperso.id_montreperso">
       <router-link
-        :to="{ name: 'montre-edit-id', params: { id: montre.id_montre } }"
+        :to="{ name: 'montreperso-edit-id', params: { id: montreperso.id_montreco } }"
       >
-        <Montreprofil class="w-64" v-bind="montre" />
+        <Montreprofil class="w-64" v-bind="montreperso" />
       </router-link>
     </li>
   </ul>
