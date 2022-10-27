@@ -12,17 +12,18 @@ import Montreface from "./Montreface.vue";
 
 let scroll = ref(true);
 const router = useRouter();
-const montreperso = ref({});
+const montreco = ref<Montre>(props.data ?? {});
+
 const props = defineProps(["id"]);
 if (props.id) {
-  // On charge les données de la maison
+  // On charge les données de la montre
   let { data, error } = await supabase
     .from("montre")
     .select("*")
-    .eq("montreco", props.id);
+    .eq("id_montre", props.id);
   if (error || !data)
     console.log("n'a pas pu charger le table Montre :", error);
-  else montreperso.value = data[0];
+  else montreco.value = data[0];
 }
 
 async function upsertMontre(dataForm, node) {
@@ -30,11 +31,9 @@ async function upsertMontre(dataForm, node) {
   if (error) node.setErrors([error.message]);
   else {
     node.setErrors([]);
-    router.push({ name: "montreperso-edit-id", params: { id: data[0].id } });
+    router.push("/Liste");
   }
 }
-
-const montreco = ref<Montre>(props.data ?? {});
 </script>
 
 <template>
@@ -61,21 +60,27 @@ const montreco = ref<Montre>(props.data ?? {});
           Cliquer pour changer de vue
         </p>
       </div>
-      <div class="ml-2 mt-14 h-96 rounded-md w-96 bg-light_grey">
+      <div class="ml-2 mt-14 h-96 w-96 rounded-md bg-light_grey">
         <div class="ml-20 mt-12 w-56">
           <FormKit
             submit-class="bg-white"
-            submit-label="Commander"
+            submit-label="Enregistrer"
             type="form"
             v-model="montreco"
             @submit="upsertMontre"
             :config="{
-                    classes: {
-                        input: '',
-                        label: '',
-                    },
-                }"
-                    :submit-attrs="{ classes: { input: 'bg-white font-athena border-2 text-black rounded-xs hover:bg-black hover:text-white p-2' } }">
+              classes: {
+                input: '',
+                label: '',
+              },
+            }"
+            :submit-attrs="{
+              classes: {
+                input:
+                  'bg-white font-athena border-2 text-black rounded-xs hover:bg-black hover:text-white p-2',
+              },
+            }"
+          >
             <FormKit
               id="ecran"
               name="ecran"
@@ -90,7 +95,8 @@ const montreco = ref<Montre>(props.data ?? {});
                 decorator: { $el: null },
               }"
               input-class="peer sr-only"
-              options-class="flex gap-1">
+              options-class="flex gap-1"
+            >
               <template #label="context">
                 <div
                   class="h-6 w-6 rounded-full border-2 border-white peer-checked:border-black"
@@ -154,7 +160,7 @@ const montreco = ref<Montre>(props.data ?? {});
               name="id_materiaux"
               id="Matériaux du bracelet"
               label="materiau du bracelet"
-              value="ece9b013-f979-49a9-ae29-9a16491a9891"
+              value="b8e44964-7fe1-4ca7-8274-c84afc2302e2"
               type="radio"
               :options="materiaux"
               :sections-schema="{
@@ -168,7 +174,7 @@ const montreco = ref<Montre>(props.data ?? {});
             >
               <template #label="context">
                 <img
-                  class="h-10 w-10 rounded-full font-aboreto border-2 border-white peer-checked:border-black"
+                  class="h-10 w-10 rounded-full border-2 border-white font-aboreto peer-checked:border-black"
                   :src="context.option.img"
                   :alt="context.option.label"
                 />

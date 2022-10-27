@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import FormMontre from "../../components/FormMontre.vue";
+import FormMontre from "@/components/FormMontre.vue";
 
 defineProps<{
   id: string;
@@ -7,5 +7,5 @@ defineProps<{
 </script>
 
 <template>
-  <FormMontre />
+  <FormMontre :id="id" />
 </template>
