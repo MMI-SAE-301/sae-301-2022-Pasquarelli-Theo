@@ -38,10 +38,11 @@ const montreco = ref<Montre>(props.data ?? {});
 </script>
 
 <template>
-  <h2>Montre connecté Tik-Tak</h2>
+  <h2 class="text-center font-aboreto text-xl">Montre connecté Tik-Tak</h2>
+  <p class="text-center font-okine text-xs">249.99€</p>
   <div>
-    <div class="flex p-4">
-      <div>
+    <div class="ml-48 flex">
+      <div class="-mt-16">
         <Montreface
           v-if="!scroll"
           v-on:click="scroll = !scroll"
@@ -56,109 +57,124 @@ const montreco = ref<Montre>(props.data ?? {});
           v-bind="montreco"
           id="profil"
         />
-        <p class="text ml-20 -mt-12 mb-12 font-okine">
+        <p class="text ml-20 -mt-12 mb-24 font-okine">
           Cliquer pour changer de vue
         </p>
       </div>
-      <div>
-        <FormKit
-          submit-label="Commander"
-          type="form"
-          v-model="montreco"
-          @submit="upsertMontre"
-        >
+      <div class="ml-20 mt-20 h-80 rounded-md w-96 bg-light_grey">
+        <div class="ml-20 w-56">
           <FormKit
-            id="ecran"
-            name="ecran"
-            label="ecran"
-            value="#FFFFFF"
-            type="radio"
-            :options="colors"
-            :sections-schema="{
-              inner: { $el: null },
-              decorator: { $el: null },
-            }"
-            input-class="peer sr-only"
-            options-class="flex gap-1"
-          >
-            <template #label="context">
-              <div
-                class="h-6 w-6 rounded-full border-2 border-white peer-checked:border-black"
-                :style="{ backgroundColor: context.option.value }"
-              ></div>
-              <span class="sr-only">{{ context.option.label }}</span></template
+            submit-class="bg-white"
+            submit-label="Commander"
+            type="form"
+            v-model="montreco"
+            @submit="upsertMontre"
+            :config="{
+                    classes: {
+                        input: '',
+                        label: '',
+                    },
+                }"
+                    :submit-attrs="{ classes: { input: 'bg-white font-athena border-2 text-black rounded-xs hover:bg-black hover:text-white p-2' } }">
+          
+            <FormKit
+              id="ecran"
+              name="ecran"
+              label="ecran"
+              value="#FFFFFF"
+              type="radio"
+              :options="colors"
+              :sections-schema="{
+                inner: { $el: null },
+                decorator: { $el: null },
+              }"
+              input-class="peer sr-only"
+              options-class="flex gap-1"
             >
-          </FormKit>
-          <FormKit
-            id="cadrant"
-            name="cadrant"
-            label="cadrant"
-            value="#FFFFFF"
-            type="radio"
-            :options="colors"
-            :sections-schema="{
-              inner: { $el: null },
-              decorator: { $el: null },
-            }"
-            input-class="peer sr-only"
-            options-class="flex gap-1"
-          >
-            <template #label="context">
-              <div
-                class="h-6 w-6 rounded-full border-2 border-white peer-checked:border-black"
-                :style="{ backgroundColor: context.option.value }"
-              ></div>
-              <span class="sr-only">{{ context.option.label }}</span>
-            </template>
-          </FormKit>
-          <FormKit
-            id="bracelet"
-            name="bracelet"
-            label="bracelet"
-            value="#FFFFFF"
-            type="radio"
-            :options="colors"
-            :sections-schema="{
-              inner: { $el: null },
-              decorator: { $el: null },
-            }"
-            input-class="peer sr-only"
-            options-class="flex gap-1"
-          >
-            <template #label="context">
-              <div
-                class="h-6 w-6 rounded-full border-2 border-white peer-checked:border-black"
-                :style="{ backgroundColor: context.option.value }"
-              ></div>
-              <span class="sr-only">{{ context.option.label }}</span></template
+              <template #label="context">
+                <div
+                  class="h-6 w-6 rounded-full border-2 border-white peer-checked:border-black"
+                  :style="{ backgroundColor: context.option.value }"
+                ></div>
+                <span class="sr-only">{{
+                  context.option.label
+                }}</span></template
+              >
+            </FormKit>
+            <FormKit
+              id="cadrant"
+              name="cadrant"
+              label="cadrant"
+              value="#FFFFFF"
+              type="radio"
+              :options="colors"
+              :sections-schema="{
+                inner: { $el: null },
+                decorator: { $el: null },
+              }"
+              input-class="peer sr-only"
+              options-class="flex gap-1"
             >
-          </FormKit>
-          <FormKit
-            name="id_materiaux"
-            label="materiau du bracelet"
-            value="ece9b013-f979-49a9-ae29-9a16491a9891"
-            type="radio"
-            :options="materiaux"
-            :sections-schema="{
-              inner: { $el: null },
-              decorator: { $el: null },
-            }"
-            legend-class="sr-only"
-            input-class="peer sr-only"
-            options-class="flex w-full justify-between gap-5"
-            wrapper-class="flex flex-col items-center"
-          >
-            <template #label="context">
-              <img
-                class="h-10 w-10 rounded-full border-2 border-white peer-checked:border-black"
-                :src="context.option.img"
-                :alt="context.option.label"
-              />
+              <template #label="context">
+                <div
+                  class="h-6 w-6 rounded-full border-2 border-white peer-checked:border-black"
+                  :style="{ backgroundColor: context.option.value }"
+                ></div>
+                <span class="sr-only">{{ context.option.label }}</span>
+              </template>
+            </FormKit>
+            <FormKit
+              id="bracelet"
+              name="bracelet"
+              label="bracelet"
+              value="#FFFFFF"
+              type="radio"
+              :options="colors"
+              :sections-schema="{
+                inner: { $el: null },
+                decorator: { $el: null },
+              }"
+              input-class="peer sr-only"
+              options-class="flex gap-1"
+            >
+              <template #label="context">
+                <div
+                  class="h-6 w-6 rounded-full border-2 border-white peer-checked:border-black"
+                  :style="{ backgroundColor: context.option.value }"
+                ></div>
+                <span class="sr-only">{{
+                  context.option.label
+                }}</span></template
+              >
+            </FormKit>
+            <br />
+            <FormKit
+              name="id_materiaux"
+              label="materiau du bracelet"
+              value="ece9b013-f979-49a9-ae29-9a16491a9891"
+              type="radio"
+              :options="materiaux"
+              :sections-schema="{
+                inner: { $el: null },
+                decorator: { $el: null },
+              }"
+              legend-class="sr-only"
+              input-class="peer sr-only"
+              options-class="flex w-full justify-between gap-5"
+              wrapper-class="flex flex-col items-center"
+            >
+              <template #label="context">
+                <img
+                  class="h-10 w-10 rounded-full border-2 border-white peer-checked:border-black"
+                  :src="context.option.img"
+                  :alt="context.option.label"
+                />
 
-              <span>{{ context.option.label }}</span>
-            </template>
+                <span>{{ context.option.label }}</span>
+              </template>
+            </FormKit>
           </FormKit>
-        </FormKit>
+        </div>
       </div>
     </div>
   </div>
