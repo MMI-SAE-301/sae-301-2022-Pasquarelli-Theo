@@ -1,7 +1,8 @@
-<script setup>
-import { createClient } from "@supabase/supabase-js";
-import { SupabaseAuthClient } from "@supabase/supabase-js/dist/module/lib/SupabaseAuthClient";
+<script setup lang="ts">
+// import { createClient } from "@supabase/supabase-js";
+// import { SupabaseAuthClient } from "@supabase/supabase-js/dist/module/lib/SupabaseAuthClient";
 import bouton from "@/components/bouton.vue";
+import {supabase, user} from '../supabase'
 
 </script>
 
@@ -12,9 +13,9 @@ import bouton from "@/components/bouton.vue";
       <hr class="ml-32 mt-4 mb-8 h-0.5 w-32 bg-black" />
 
     <div class="text-center">
-    <bouton libelle="Authentification avec Google" class="border-2 mb-3 mt-28 rounded-sm w-96 h-14" @click="logingoogle()"/><br />
-    <bouton libelle="Authentification avec Facebook" class="border-2 m-3 rounded-sm w-96 h-14" @click="loginfacebook()"/><br />
-    <bouton libelle="Deconnexion" class="border-2 mt-3 mb-28 rounded-sm w-96 h-14" @click="logout()"/><br />
+    <bouton libelle="Authentification avec Google" class="border-2 mb-3 mt-28 rounded-sm w-96 h-14" @pointerdown="supabase.auth.signIn({ provider: 'google'})" /><br />
+    <bouton libelle="Authentification avec Facebook" class="border-2 m-3 rounded-sm w-96 h-14" @pointerdown="supabase.auth.signIn({ provider: 'facebook'})"  /><br />
+    <bouton libelle="Deconnexion" class="border-2 mt-3 mb-28 rounded-sm w-96 h-14" @pointerdown="supabase.auth.signOut()" /><br />
     <label id="status"></label>
     </div>
     
@@ -23,7 +24,7 @@ import bouton from "@/components/bouton.vue";
 
 </template>
 
-<script>
+<!-- <script>
 const SUPABASE_URL = "https://vflbstvxrtkxbbdrbewe.supabase.co";
 const SUPABASE_KEY =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZmbGJzdHZ4cnRreGJiZHJiZXdlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjY3NjcxODAsImV4cCI6MTk4MjM0MzE4MH0.3g0-xEZ72u_aE7dUYA6t9XGagYHUYrWMh6q49dQ-KDk";
@@ -103,4 +104,4 @@ export default {
     });
   },
 };
-</script>
+</script> -->
