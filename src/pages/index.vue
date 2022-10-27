@@ -6,7 +6,7 @@ import bouton from "@/components/bouton.vue";
 
 <template>
   <div class="grid grid-flow-row-dense grid-cols-2">
-    <img src="../assets/montre_ombre.svg" class="ml-64 mt-10 w-2/4" />
+    <img src="../assets/montre_ombre.svg" class="ml-64 mt-10 w-2/4" alt="photo de la montre personnalisable Tik-Tak"/>
     <div class="mt-24 ml-24">
       <img src="../assets/CoinH.png" class="-ml-12" />
       <h2 class="font-aboreto text-xl">Tik-Tak</h2>
@@ -25,11 +25,11 @@ import bouton from "@/components/bouton.vue";
     Personnalisé différents composants de votre montre Tik-Tak
   </h2>
   <hr class="ml-36 mt-4 mb-8 h-0.5 w-96 bg-black" />
-  <img src="../assets/montre_decompo.png" class="mx-auto mb-16 block w-3/5" />
+  <img src="../assets/montre_decompo.png" class="mx-auto mb-16 block w-3/5" alt="image de la montre Tik-Tak décomposé en différent composants"/>
   <hr class="h-0.5 w-full bg-black" />
 
   <div class="grid grid-flow-row-dense grid-cols-2 -mb-32">
-    <img src="../assets/exmontres.png" class="m-16 h-3/5" />
+    <img src="../assets/exmontres.png" class="m-16 h-3/5" alt="exemple de 3 montres différentes"/>
     <div class="mt-24 ml-12">
       <img src="../assets/CoinH.png" class="-ml-12" />
 
