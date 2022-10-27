@@ -4,7 +4,7 @@ import {supabase, user} from '../supabase'
 
 </script>
 
-<template class="">
+<template class="dark:bg-slate-700 dark:text-light_grey">
   <div class="ml-56 border-0 w-2/3">
 <div class="bg-light_grey">
     <h2 class=" ml-28 w-1/2 font-aboreto text-xl">Compte</h2>

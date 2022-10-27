@@ -38,9 +38,9 @@ async function upsertMontre(dataForm, node) {
 }
 </script>
 
-<template>
-  <h2 class="text-center font-aboreto text-xl">Montre connecté Tik-Tak</h2>
-  <p class="text-center font-okine text-xs">249.99€</p>
+<template class="dark:bg-slate-700 dark:text-light_grey">
+  <h2 class="text-center font-aboreto text-xl dark:text-light_grey">Montre connecté Tik-Tak</h2>
+  <p class="text-center font-okine text-xs dark:text-light_grey">249.99€</p>
   <div>
     <div class="ml-32 flex place-content-center">
       <div class="-mt-16">
@@ -58,7 +58,7 @@ async function upsertMontre(dataForm, node) {
           v-bind="montreco"
           id="profil"
         />
-        <p class="text ml-20 -mt-12 mb-24 font-okine">
+        <p class="text ml-20 -mt-12 mb-24 font-okine dark:text-light_grey">
           Cliquer pour changer de vue
         </p>
       </div>
@@ -89,7 +89,7 @@ async function upsertMontre(dataForm, node) {
               label="ecran"
               value="#FFFFFF"
               type="radio"
-              legend-class="font-aboreto"
+              legend-class="font-aboreto dark:text-light_grey"
               :options="colors"
               option-label="font-aboreto"
               :sections-schema="{
@@ -115,7 +115,7 @@ async function upsertMontre(dataForm, node) {
               label="cadrant"
               value="#FFFFFF"
               type="radio"
-              legend-class="font-aboreto"
+              legend-class="font-aboreto dark:text-light_grey"
               :options="colors"
               :sections-schema="{
                 inner: { $el: null },
@@ -138,7 +138,7 @@ async function upsertMontre(dataForm, node) {
               label="bracelet"
               value="#FFFFFF"
               type="radio"
-              legend-class="font-aboreto"
+              legend-class="font-aboreto dark:text-light_grey"
               :options="colors"
               :sections-schema="{
                 inner: { $el: null },
@@ -169,8 +169,8 @@ async function upsertMontre(dataForm, node) {
                 inner: { $el: null },
                 decorator: { $el: null },
               }"
-              legend-class="font-aboret sr-only"
-              input-class="peer text-black font-aboret sr-only"
+              legend-class="font-aboret sr-only dark:text-light_grey"
+              input-class="peer text-black font-aboret sr-only dark:text-light_grey"
               options-class="flex w-full justify-between gap-5"
               wrapper-class="flex flex-col items-center"
             >

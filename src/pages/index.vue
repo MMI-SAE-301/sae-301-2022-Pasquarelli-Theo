@@ -4,7 +4,7 @@ import Montreface from "@/components/Montreface.vue";
 import bouton from "@/components/bouton.vue";
 </script>
 
-<template>
+<template class="dark:bg-slate-700 dark:text-light_grey">
   <div class="grid grid-flow-row-dense grid-cols-2">
     <img src="../assets/montre_ombre.svg" class="ml-64 mt-10 w-2/4" alt="photo de la montre personnalisable Tik-Tak"/>
     <div class="mt-24 ml-24">

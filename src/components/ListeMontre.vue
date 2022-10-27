@@ -13,7 +13,7 @@ if (error) {
 }
 </script>
 
-<template>
+<template class="dark:bg-slate-700 dark:text-light_grey">
   <ul>
     <li v-for="montreperso in Montre" :key="montreperso.id_montreperso">
       <router-link
