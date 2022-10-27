@@ -31,10 +31,10 @@ Noté sur 40.
 - Code et Commit (0-2-4-6pts)
 - Code HTML spécifiquement sémantique et accessible (0-1-2pts)
 
-- [ ] usage de Classes utilitaires (1pt)
+- [x] usage de Classes utilitaires (1pt)
   - lien vers sa définition
   - lien vers son usage
-- [ ] Composants graphiques (0-1-2pts)
+- [x] Composants graphiques (0-1-2pts)
   - liens
 - Technique CSS (0-1-2pts)
   - Quelles techniques (Eg. Styles graphiques (répétés) tous ajoutés par CSS et/ou
@@ -45,12 +45,12 @@ Noté sur 40.
   - Quelles techniques (Grilles Flex...)
     - ...
   - liens
-  - [ ] Mise en page fluide
+  - [x] Mise en page fluide
 - [ ] Mobile First (0-1-2pts)
   - [ ] Plusieurs tailles
     - Lesquelles...
-- [ ] Dark Mode (0-1-2pts)
-  - [ ] Simple usage de 'dark:'
+- [x] Dark Mode (0-1-2pts)
+  - [x] Simple usage de 'dark:'
   - [ ] Mise en place avec usage de custom property pour les couleurs. Ou usage de DaisyUI AVEC thèmes perso
     - liens
 - "tailwin.config.js" (0-1-2pts)
@@ -58,7 +58,7 @@ Noté sur 40.
   - [ ] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
     - liens
 - Composants "accessibles" (0-1-2pts)
-  - [ ] textes "accessibles" (eg. 'sr-only')
-  - [ ] Contenu accessible ET Usage de composants étudié pour accessibilité (Eg. HeadlessUI)
+  - [] textes "accessibles" (eg. 'sr-only')
+  - [x] Contenu accessible ET Usage de composants étudié pour accessibilité (Eg. HeadlessUI)
 
 [^1]: Supprimez les mentions inutiles.
