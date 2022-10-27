@@ -38,7 +38,7 @@ const montreco = ref<Montre>(props.data ?? {});
 <template>
   <div>
     <div class="flex content-center p-4">
-      <div class="flex content-center">
+      <div class="overflow-x-scroll flex content-center">
           <Montreprofil
             class="w-1/3 mr-16"
             v-bind="montreco"
@@ -51,7 +51,7 @@ const montreco = ref<Montre>(props.data ?? {});
           />
       </div>
       <div>
-        <FormKit type="form" v-model="montreco" @submit="upsertMontre">
+        <FormKit submit-label="Commander" type="form" v-model="montreco" @submit="upsertMontre">
           <FormKit
             id="ecran"
             name="ecran"
