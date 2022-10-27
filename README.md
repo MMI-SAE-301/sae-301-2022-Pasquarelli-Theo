@@ -3,7 +3,8 @@
 - **Nom :Pasquarelli**
 - **Prénom :Théo**
 - **URL maquette Figma:https://www.figma.com/file/UHQCn8HO9KSvoDBob7a4p1/SAE_301_Th%C3%A9o_Pasquarelli?node-id=7%3A2**
-- **URL publique du site :**
+- **URL publique du site (heroku) :https://tiktak-theo.herokuapp.com/**
+- **URL publique du site (netlify):https://statuesque-custard-db921b.netlify.app/**
 - **URL projet Supabase :https://vflbstvxrtkxbbdrbewe.supabase.co**
   - [x] Avez-vous invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase ?
 
